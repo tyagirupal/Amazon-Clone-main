@@ -1,0 +1,158 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  background-color: #e3e6e6;
+
+  .background-spacing {
+    width: 1500px;
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+
+    .home-background {
+      height: 600px;
+      cursor: pointer;
+    }
+
+    .home-background-left {
+      height: 600px;
+      animation: left 0.5s forwards;
+    }
+
+    @keyframes left {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: 1500px;
+      }
+    }
+
+    .home-background-right {
+      height: 600px;
+      animation: right 0.5s forwards;
+    }
+
+    @keyframes right {
+      from {
+        margin-left: 0;
+      }
+      to {
+        margin-left: -1500px;
+      }
+    }
+
+    .home-background-left-switch {
+      height: 600px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: left-switch 0.5s forwards;
+    }
+
+    @keyframes left-switch {
+      from {
+        left: -1500px;
+      }
+      to {
+        left: 0;
+      }
+    }
+
+    .home-background-right-switch {
+      height: 600px;
+      position: absolute;
+      top: 0;
+      left: 1500px;
+      animation: right-switch 0.5s forwards;
+    }
+
+    @keyframes right-switch {
+      from {
+        left: 1500px;
+      }
+      to {
+        left: 0;
+      }
+    }
+
+    .left-button {
+      width: 80px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      left: 74px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      img {
+        width: 34px;
+        height: 39px;
+      }
+    }
+
+    .right-button {
+      width: 80px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      right: 74px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+
+      img {
+        width: 34px;
+        height: 39px;
+      }
+    }
+
+    .left-button:focus,
+    .right-button:focus {
+      box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px #008296;
+    }
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px;
+    margin-top: 231px;
+
+    .home-page-category {
+      height: 420px;
+      padding: 20px;
+      overflow: hidden;
+      background-color: #ffffff;
+      cursor: pointer;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: 21px;
+      }
+
+      img {
+        width: 310px;
+        height: 305px;
+        margin-bottom: 15px;
+      }
+
+      a {
+        @include linkHoverEffect;
+        font-size: $font-size-13px;
+        color: $secondary-link-text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

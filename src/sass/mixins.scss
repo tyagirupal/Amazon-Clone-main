@@ -1,0 +1,48 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+@mixin outline($outline) {
+  outline: $outline;
+}
+
+@mixin fullscreen-modal($opacity) {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: $opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: modal-open;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+@mixin exceptheader-modal($opacity) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+  background-color: #000000;
+  animation: sign-in-modal-mouseover 0.2s forwards;
+}
+
+@mixin linkHoverEffect {
+  &:hover {
+    text-decoration: underline;
+    color: #e47911;
+  }
+}
+
+@mixin whiteButtonHover {
+  &:hover {
+    background-color: #f4f5f5;
+  }
+}

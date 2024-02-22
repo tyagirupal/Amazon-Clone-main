@@ -1,0 +1,293 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.products-page {
+  display: flex;
+  padding: 14px 18px 18px;
+  font-size: $font-size-14px;
+  color: #0f1111;
+
+  .filter-products {
+    width: 198px;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #ddd;
+
+    span {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .category {
+      margin-left: 12px;
+    }
+
+    .choose-category {
+      display: flex;
+      flex-direction: column;
+      margin-left: 24px;
+
+      a {
+        margin-bottom: 4px;
+        text-decoration: none;
+        color: #0f1111;
+      }
+
+      a:hover {
+        text-decoration: none;
+        @include linkHoverEffect;
+      }
+    }
+  }
+
+  .products {
+    h1 {
+      padding: 0 0 4px 12px;
+      font-size: 28px;
+    }
+
+    .products-description {
+      padding-left: 12px;
+    }
+
+    h2 {
+      padding-left: 12px;
+      margin-top: 54px;
+      font-size: 28px;
+    }
+
+    .top-rated {
+      margin: 10px 0 0 12px;
+
+      .top-rated-spacing {
+        display: flex;
+
+        .top-rated-item {
+          height: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 4px;
+          position: relative;
+          background-color: $primary-products-background;
+          cursor: pointer;
+
+          .quick-look {
+            width: 201px;
+            height: 29px;
+            position: absolute;
+            bottom: 9px;
+            text-align: center;
+            border-radius: 7px;
+            border: 1px solid #cfcfcf;
+            background-color: #ffffff;
+            cursor: pointer;
+          }
+
+          .quick-look:hover {
+            background-color: #f1f6fa;
+          }
+
+          img {
+            width: 180px;
+            max-height: 230px;
+          }
+        }
+
+        .top-rated-info {
+          height: 116px;
+          width: 98%;
+          padding: 10px 20px 0 20px;
+          border: 1px solid #f5f5f5;
+          background-color: #ffffff;
+          cursor: pointer;
+
+          h3 {
+            font-size: 21px;
+            font-weight: normal;
+          }
+
+          h6 {
+            margin-top: 10px;
+            font-size: $font-size-12px;
+            text-decoration: line-through;
+            color: #565959;
+          }
+
+          p {
+            width: 200px;
+            margin-bottom: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .review-spacing {
+            display: flex;
+
+            .review-stars {
+              width: 71px;
+              height: 14px;
+            }
+
+            span {
+              margin-left: 3px;
+              font-size: $font-size-12px;
+            }
+          }
+        }
+      }
+    }
+
+    .under-25 {
+      margin: 10px 0 0 12px;
+
+      .under-25-spacing {
+        display: flex;
+
+        .under-25-item {
+          height: 250px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-right: 4px;
+          position: relative;
+          background-color: $primary-background-color;
+          cursor: pointer;
+
+          .quick-look {
+            width: 201px;
+            height: 29px;
+            position: absolute;
+            bottom: 9px;
+            text-align: center;
+            border-radius: 7px;
+            border: 1px solid #cfcfcf;
+            background-color: #ffffff;
+            cursor: pointer;
+          }
+
+          .quick-look:hover {
+            background-color: #f1f6fa;
+          }
+
+          img {
+            width: 180px;
+            max-height: 230px;
+          }
+        }
+
+        .under-25-info {
+          height: 116px;
+          width: 98%;
+          padding: 10px 20px 0 20px;
+          border: 1px solid #f5f5f5;
+          background-color: #ffffff;
+          cursor: pointer;
+
+          h3 {
+            font-size: 21px;
+            font-weight: normal;
+          }
+
+          h6 {
+            margin-top: 10px;
+            font-size: $font-size-12px;
+            text-decoration: line-through;
+            color: #565959;
+          }
+
+          p {
+            width: 200px;
+            margin-bottom: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .review-spacing {
+            display: flex;
+
+            .review-stars {
+              width: 71px;
+              height: 14px;
+            }
+
+            span {
+              margin-left: 3px;
+              font-size: $font-size-12px;
+            }
+          }
+        }
+      }
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 251px 251px 251px;
+      column-gap: 5px;
+      row-gap: 5px;
+      margin: 10px 0 0 12px;
+
+      .products-item {
+        height: 280px;
+        margin-bottom: 245px;
+        border-radius: 4px;
+        background-color: $primary-products-background;
+        cursor: pointer;
+
+        .products-image {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 26px 8px;
+          border: 1px solid #f0f0f0;
+
+          img {
+            max-width: 230px;
+            max-height: 200px;
+          }
+        }
+      }
+
+      .description {
+        max-width: 251px;
+        height: 245px;
+        padding: 0 8px;
+        border: 1px solid #f0f0f0;
+        background-color: #ffffff;
+
+        p {
+          padding-top: 8px;
+          margin-bottom: 4px;
+          font-size: $font-size-16px;
+        }
+
+        .star-spacing {
+          display: flex;
+          align-items: center;
+
+          span {
+            padding-top: 2px;
+            margin-left: 5px;
+          }
+        }
+
+        h3 {
+          margin-top: 8px;
+          font-size: 28px;
+          font-weight: normal;
+        }
+
+        .deliver-to {
+          font-size: $font-size-12px;
+        }
+      }
+    }
+  }
+}

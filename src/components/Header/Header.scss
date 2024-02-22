@@ -1,0 +1,309 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.header {
+  .header-input {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 9px;
+    background-color: $secondary-background-color;
+
+    .logo-spacing {
+      display: flex;
+    }
+
+    .amazon-logo {
+      width: 113px;
+      height: 50px;
+      padding: 13px 8px 0px 6px;
+      cursor: pointer;
+    }
+
+    .amazon-logo:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+
+    .deliver-spacing {
+      width: max-content;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 0 9px 0 9px;
+      margin: 0px 2px 5px 5px;
+
+      .location-logo {
+        width: 19px;
+        height: 22px;
+        margin-top: 5px;
+      }
+
+      .deliver {
+        border: none;
+        background-color: $secondary-background-color;
+        color: $primary-text-color;
+
+        .deliver-to {
+          display: flex;
+          font-size: 11px;
+          color: #cccccc;
+        }
+
+        .usa {
+          font-size: $font-size-14px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 6px 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    .search-amazon.outline {
+      outline: 3px solid #ffbc58;
+    }
+
+    .input-spacing {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .select-niche {
+      height: 38px;
+      width: auto;
+      padding: 0 0 0 5px;
+      font-size: $font-size-12px;
+      background-color: #e6e6e6;
+      color: #0f1111;
+      border-radius: 4px 0 0 4px;
+      border: none;
+    }
+
+    .select-niche:focus {
+      outline: 3px solid #ffbc58;
+    }
+
+    .search-amazon {
+      width: 100%;
+      padding: 11px 0px;
+      margin-left: 3px;
+      outline: none;
+      border: none;
+    }
+
+    .search-amazon:focus {
+      outline: 3px solid #ffbc58;
+    }
+
+    .search-amazon::placeholder {
+      font-size: $font-size-14px;
+      margin-left: 5px;
+    }
+
+    .search-button {
+      width: 45px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffbc58;
+      border: none;
+      border-radius: 0px 4px 4px 0px;
+      cursor: pointer;
+    }
+
+    .search-button img {
+      width: 24px;
+      height: 24px;
+      margin-top: 3px;
+    }
+
+    .search-button:hover {
+      background-color: #edb055;
+    }
+  }
+
+  .amazon-tools {
+    display: flex;
+
+    .change-language {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      padding: 10px 2px 0px 9px;
+      color: $primary-text-color;
+      font-size: $font-size-14px;
+      font-weight: bold;
+      cursor: pointer;
+
+      img {
+        width: 19px;
+        height: 14px;
+        margin-right: 4px;
+      }
+
+      .dropdown {
+        width: 15px;
+        height: 10px;
+        margin-top: 6px;
+      }
+    }
+    .sign-in {
+      width: max-content;
+      height: 50px;
+      display: flex;
+      padding: 0px 9px 10px;
+      color: $primary-text-color;
+      text-decoration: none;
+      cursor: pointer;
+
+      .sign-in-spacing {
+        padding-top: 5px;
+      }
+
+      .sign-in-text {
+        font-size: $font-size-12px;
+
+        span {
+          margin-left: 3px;
+        }
+      }
+
+      .account-list {
+        font-size: $font-size-14px;
+      }
+    }
+
+    .sign-in-dropdown {
+      width: 15px;
+      height: 10px;
+      margin: 29px 0 0 2px;
+    }
+
+    .sign-in:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+
+    .returns-orders {
+      width: max-content;
+      height: 50px;
+      padding: 5px 9px 10px;
+      cursor: pointer;
+    }
+
+    .returns-orders span {
+      font-size: $font-size-12px;
+      color: $primary-text-color;
+    }
+
+    .returns-orders p {
+      font-size: $font-size-14px;
+      font-weight: bold;
+      color: $primary-text-color;
+    }
+
+    .returns-orders:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+
+    .cart {
+      display: flex;
+      padding: 5px 9px 11px;
+      cursor: pointer;
+
+      .cart-count span {
+        position: absolute;
+        right: 60px;
+        top: 11px;
+        font-weight: bold;
+        color: #f08804;
+      }
+
+      .cart-text {
+        padding-top: 18px;
+        font-size: $font-size-14px;
+        font-weight: bold;
+        color: $primary-text-color;
+      }
+    }
+
+    .cart:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+  }
+
+  .change-language:hover {
+    @include outline(1px solid #ffffff);
+    @include border-radius(2px);
+  }
+
+  .nav-bar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: $tertiary-background-color;
+
+    .open-sidebar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 9px;
+      margin-left: 5px;
+      font-size: $font-size-14px;
+      font-weight: bold;
+      background-color: $tertiary-background-color;
+      color: $primary-text-color;
+      border: none;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+      }
+    }
+
+    .open-sidebar:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+
+    a:first-child img {
+      width: 14px;
+      height: 17px;
+      margin-right: 2px;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 8px 9px;
+      margin-left: 5px;
+      font-size: $font-size-14px;
+      color: $primary-text-color;
+    }
+
+    a:hover {
+      @include outline(1px solid #ffffff);
+      @include border-radius(2px);
+    }
+  }
+}

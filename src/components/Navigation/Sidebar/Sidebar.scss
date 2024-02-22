@@ -1,0 +1,306 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.sidebar {
+  width: 365px;
+  height: -webkit-fill-available;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 20px;
+  background-color: $primary-background-color;
+  animation: sidebar;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+
+  .sidebar-sign-in {
+    width: 365px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: $tertiary-background-color;
+    cursor: pointer;
+
+    .sign-in-text {
+      display: flex;
+      align-items: center;
+      margin: 0 10px 0 36px;
+      font-size: $font-size-12px;
+      color: $primary-text-color;
+
+      img {
+        width: 33px;
+        height: 33px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .sidebar-categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    img {
+      width: 17px;
+      height: 17px;
+    }
+
+    .sidebar-categories:hover {
+      background-color: #eaeded;
+    }
+  }
+
+  .help-settings {
+    padding: 17px 28px 13px 36px;
+    margin-top: 5px;
+    font-size: $font-size-18px;
+    font-weight: bold;
+    border-top: 1px solid #d5dbdb;
+    color: #111111;
+  }
+
+  .your-account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+  }
+
+  .your-account:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-language {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    .web-logo {
+      width: 13px;
+      height: 13px;
+      margin-right: 10px;
+    }
+  }
+
+  .sidebar-language:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-country {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    .sidebar-usa-flag {
+      width: 18px;
+      height: 12px;
+      margin-right: 10px;
+    }
+  }
+
+  .sidebar-country:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-second-sign-in {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+  }
+
+  .sidebar-second-sign-in:hover {
+    background-color: #eaeded;
+  }
+}
+
+.sidebar-close-button {
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 20px;
+  left: 380px;
+  cursor: pointer;
+}
+
+@keyframes sidebar {
+  from {
+    left: -365px;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.sidebar-close {
+  width: 365px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -365px;
+  background-color: $primary-background-color;
+  animation: sidebar-close;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+
+  .sidebar-sign-in {
+    width: 365px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: $tertiary-background-color;
+    cursor: pointer;
+
+    .sign-in-text {
+      display: flex;
+      align-items: center;
+      margin: 0 10px 0 36px;
+      font-size: $font-size-12px;
+      color: $primary-text-color;
+
+      img {
+        width: 33px;
+        height: 33px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .sidebar-categories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    img {
+      width: 17px;
+      height: 17px;
+    }
+
+    .sidebar-categories:hover {
+      background-color: #eaeded;
+    }
+  }
+
+  .help-settings {
+    padding: 17px 28px 13px 36px;
+    margin-top: 5px;
+    font-size: $font-size-18px;
+    font-weight: bold;
+    border-top: 1px solid #d5dbdb;
+    color: #111111;
+  }
+
+  .your-account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+  }
+
+  .your-account:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-language {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    .web-logo {
+      width: 13px;
+      height: 13px;
+      margin-right: 10px;
+    }
+  }
+
+  .sidebar-language:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-country {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+
+    .sidebar-usa-flag {
+      width: 18px;
+      height: 12px;
+      margin-right: 10px;
+    }
+  }
+
+  .sidebar-country:hover {
+    background-color: #eaeded;
+  }
+
+  .sidebar-second-sign-in {
+    display: flex;
+    align-items: center;
+    padding: 13px 28px 13px 36px;
+    font-size: $font-size-14px;
+    cursor: pointer;
+  }
+
+  .sidebar-second-sign-in:hover {
+    background-color: #eaeded;
+  }
+}
+
+@keyframes sidebar-close {
+  from {
+    left: 0;
+  }
+  to {
+    left: -365px;
+  }
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.sidebar-modal {
+  @include fullscreen-modal(0);
+}
+
+.sidebar-modal-close {
+  @include fullscreen-modal(0.8);
+  animation: modal-close 0.4s forwards;
+}
+
+@keyframes modal-close {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}

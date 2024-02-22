@@ -1,0 +1,153 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.sign-in-triangle {
+  width: 15px;
+  height: 10px;
+  position: absolute;
+  top: 44px;
+  right: 188px;
+}
+
+.sign-in-bar {
+  width: 500px;
+  height: 386px;
+  padding: 14px 14px 7px;
+  position: absolute;
+  top: 52px;
+  right: 60px;
+  z-index: 2;
+  border: 1px solid #bbbbbb;
+  border-radius: 3px;
+  background-color: #ffffff;
+
+  .button-space {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sign-in-button {
+    width: 218px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font-size-12px;
+    border-radius: 8px;
+    border: 1px solid #fcd200;
+    background-color: $primary-button-color;
+    color: #111111;
+    box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+    cursor: pointer;
+  }
+
+  .sign-in-button:hover {
+    text-decoration: underline;
+  }
+
+  .sign-in-bar-register {
+    display: flex;
+    justify-content: center;
+    margin: 7px 0 16px 0;
+    padding-bottom: 9px;
+    font-size: 11px;
+    border-bottom: 1px solid #eeeeee;
+    color: #333333;
+
+    a {
+      margin-left: 2px;
+      text-decoration: none;
+      color: #0055aa;
+      cursor: pointer;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #e47911;
+    }
+  }
+
+  .lists-account {
+    display: flex;
+
+    .lists {
+      width: 100%;
+      height: 273px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+
+      span {
+        padding-bottom: 10px;
+        font-size: $font-size-16px;
+        font-weight: bold;
+      }
+
+      a {
+        font-size: $font-size-13px;
+        text-decoration: none;
+        color: $secondary-text-color;
+        cursor: pointer;
+      }
+
+      a {
+        @include linkHoverEffect;
+      }
+    }
+
+    .account {
+      width: 100%;
+      height: 273px;
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      border-left: 1px solid #eeeeee;
+
+      span {
+        padding-bottom: 10px;
+        font-size: $font-size-16px;
+        font-weight: bold;
+      }
+
+      a {
+        font-size: $font-size-13px;
+        text-decoration: none;
+        color: $secondary-text-color;
+      }
+
+      a {
+        @include linkHoverEffect;
+      }
+    }
+  }
+}
+
+.sign-in-modal-mouseover {
+  @include exceptheader-modal(0);
+}
+
+@keyframes sign-in-modal-mouseover {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+.sign-in-modal-mouseout {
+  @include exceptheader-modal(0.8);
+  animation: sign-in-modal-mouseout 0.2s forwards;
+  z-index: -2;
+}
+
+@keyframes sign-in-modal-mouseout {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,294 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.sign-in-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 18px;
+
+  .image-spacing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 103px;
+      height: 31px;
+      cursor: pointer;
+    }
+  }
+
+  .sign-in-spacing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .sign-in-box {
+      width: 348px;
+      height: auto;
+      padding: 20px 26px;
+      margin: 20px 0 14px;
+      border: 2px solid #eeeeee;
+      border-radius: 8px;
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-weight: normal;
+      }
+
+      .enter-info-text {
+        font-size: $font-size-13px;
+        font-weight: bold;
+      }
+
+      .enter-email {
+        display: flex;
+        flex-direction: column;
+
+        .enter-text {
+          padding: 6px 7px;
+          margin: 2px 0 12px;
+          border: $primary-border-color;
+          border-radius: 4px;
+        }
+
+        .enter-text:focus {
+          background-color: #f7feff;
+          border-color: $secondary-border-color;
+          box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 17, 0.15) inset;
+          outline: none;
+        }
+
+        .input-warning-border {
+          padding: 6px 7px;
+          margin: 2px 0 12px;
+          border: 2px solid #cc0c39;
+          border-radius: 4px;
+          outline: none;
+        }
+
+        .input-warning-border:focus {
+          box-shadow: 0px 0px 3px 0px #cc0c39;
+        }
+
+        .sign-in-input-warning {
+          display: flex;
+          margin-bottom: 11px;
+          font-size: 12px;
+          color: red;
+        }
+
+        .sign-in-input-warning img {
+          width: 9px;
+          height: 13px;
+          margin-right: 3px;
+        }
+
+        button {
+          padding: 8px 7px;
+          border: none;
+          border-radius: 8px;
+          font-size: $font-size-13px;
+          color: #000000;
+          background-color: $primary-button-color;
+          box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: $primary-button-hover-color;
+        }
+      }
+
+      .conditions-of-use {
+        margin-top: 18px;
+        font-size: $font-size-12px;
+        color: #000000;
+
+        a {
+          color: $link-text-color;
+          @include linkHoverEffect;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      .help {
+        display: flex;
+        flex-direction: column;
+
+        .forgot-password {
+          display: flex;
+          align-items: center;
+          margin-top: 25px;
+          font-size: $font-size-13px;
+          color: $link-text-color;
+          text-decoration: none;
+        }
+
+        .forgot-password:hover {
+          @include linkHoverEffect;
+        }
+
+        .buying-for-work {
+          margin: 28px 0 10px;
+          font-size: $font-size-13px;
+          font-weight: bold;
+          border-top: $primary-border-color;
+          padding-top: 14px;
+        }
+
+        .amazon-business {
+          font-size: $font-size-13px;
+          color: $link-text-color;
+          text-decoration: none;
+        }
+
+        .amazon-business:hover {
+          @include linkHoverEffect;
+        }
+      }
+
+      .email-or-number {
+        margin-bottom: 14px;
+        font-size: $font-size-13px;
+
+        .change-account {
+          margin-left: 5px;
+          color: $link-text-color;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .change-account:hover {
+          @include linkHoverEffect;
+        }
+      }
+
+      .password-text {
+        padding-bottom: 2px;
+        margin-top: 14px;
+        font-size: $font-size-13px;
+        font-weight: bold;
+      }
+
+      .password-input {
+        width: 100%;
+        padding: 6px 7px;
+        margin: 2px 0 12px;
+        border: $primary-border-color;
+        border-radius: 4px;
+      }
+
+      .password-input:focus {
+        background-color: #f7feff;
+        border-color: $secondary-border-color;
+        box-shadow: 0 0 0 3px #c8f3fa, 0 1px 2px rgba(15, 17, 17, 0.15) inset;
+        outline: none;
+      }
+
+      .sign-in-button {
+        width: 100%;
+        padding: 8px 7px;
+        margin-bottom: 18px;
+        border: none;
+        border-radius: 8px;
+        font-size: $font-size-13px;
+        color: #000000;
+        background-color: $primary-button-color;
+        box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+        cursor: pointer;
+      }
+
+      .sign-in-button:hover {
+        background-color: $primary-button-hover-color;
+      }
+
+      .keep-signed-in {
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        font-size: $font-size-13px;
+
+        input {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .divider-spacing {
+    width: 348px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .new-to-amazon {
+      width: 116px;
+      display: flex;
+      justify-content: center;
+      font-size: $font-size-12px;
+      background-color: #ffffff;
+      color: #767676;
+    }
+
+    .divider {
+      height: 1px;
+      width: 350px;
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      z-index: -1;
+      border-top: 1px solid #e7e7e7;
+    }
+  }
+
+  .create-account {
+    margin-top: 14px;
+    padding: 7px 86px 7px 86px;
+    font-size: $font-size-13px;
+    border-radius: 7px;
+    border: 1px solid #e7e7e7;
+    background-color: transparent;
+    color: #0f1111;
+    box-shadow: 0 2px 5px 0 #d5d9d980;
+    cursor: pointer;
+  }
+
+  .create-account:hover {
+    @include whiteButtonHover;
+  }
+
+  .sign-in-footer-divider {
+    width: 50%;
+    height: 30px;
+    margin-top: 24px;
+    background: linear-gradient(#d5d9d980, #fff, #fff);
+  }
+
+  .sign-in-footer-text {
+    display: flex;
+    justify-content: center;
+    padding-left: 28px;
+
+    a {
+      margin: 0 30px 10px 0;
+      font-size: 11px;
+      color: $link-text-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      @include linkHoverEffect;
+    }
+  }
+
+  .copyright-notice {
+    margin-bottom: 25px;
+    font-size: 11px;
+    color: #555555;
+  }
+}

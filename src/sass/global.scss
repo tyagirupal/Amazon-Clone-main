@@ -1,0 +1,25 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./variables.scss";
+@import "/src/views/SignInPage/SignInPage.scss";
+@import "/src/components/Header/Header.scss";
+@import "/src/components/Navigation/Sidebar/Sidebar.scss";
+@import "/src/components/Navigation/SignInModal/SignInModal.scss";
+@import "/src/features/LanguageChange/LanguageChange.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("/src/fonts/Amazon\ Ember.ttf"),
+    url("/src/fonts/Amazon\ Ember\ Bold.ttf");
+}
+
+body {
+  font-family: "Amazon Ember";
+  font-weight: 400;
+}

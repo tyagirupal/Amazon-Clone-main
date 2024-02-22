@@ -1,0 +1,156 @@
+@import "/src/sass/mixins.scss";
+@import "/src/sass/variables.scss";
+@import "/src/sass/colors.scss";
+
+.wish-list-spacing {
+  display: flex;
+  justify-content: center;
+
+  .wish-list-page {
+    padding: 14px 18px 18px;
+
+    .your-lists {
+      display: inline-flex;
+      padding: 15px 17px 15px 18px;
+      font-size: 24px;
+      border-bottom: 2px solid $secondary-background-color;
+      color: $secondary-link-text-color;
+      cursor: pointer;
+    }
+
+    .your-lists:hover {
+      text-decoration: underline;
+    }
+
+    .wish-list {
+      position: relative;
+      padding: 5px 0 0;
+      border: 1px solid #dddddd;
+
+      .wish-list-background {
+        padding: 14px;
+        margin-bottom: 22px;
+      }
+
+      .lists {
+        position: absolute;
+        top: 6%;
+        left: 45%;
+        color: #ffffff;
+        font-size: 70px;
+      }
+
+      .shopping-needs {
+        position: absolute;
+        top: 17%;
+        left: 32%;
+        color: #ffffff;
+        font-size: 37px;
+      }
+
+      .wish-list-sign-in {
+        position: absolute;
+        top: 27%;
+        left: 48%;
+        padding: 8px 11px 8px;
+        font-size: 13px;
+        border-radius: 7px;
+        border: none;
+        background-color: #ffd814;
+        box-shadow: 0 2px 5px 0 rgba(213, 217, 217, 0.5);
+        cursor: pointer;
+      }
+
+      .wish-list-sign-in:hover {
+        background-color: $primary-button-hover-color;
+      }
+
+      .wish-list-info {
+        width: 780px;
+        height: 90px;
+        padding: 10px 14px;
+        position: absolute;
+        top: 36%;
+        left: 20%;
+        background-color: #f3f3f3;
+
+        .add-items {
+          display: flex;
+
+          .book-image {
+            width: 45px;
+            height: 45px;
+          }
+
+          .shopping-list {
+            width: 375px;
+            display: flex;
+            align-items: center;
+            border-right: 1px #b3b3b3 solid;
+
+            .shopping-list-spacing {
+              margin: 8px 130px 0 0;
+            }
+
+            span {
+              font-size: 28px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .let-people-know {
+          display: flex;
+          align-items: center;
+
+          .let-people-know-spacing {
+            margin: 5px 94px 0px 14px;
+          }
+
+          .gift-image {
+            width: 45px;
+            height: 45px;
+          }
+
+          span {
+            font-size: 28px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .wish-list-benefits {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: auto auto;
+
+        .benefit {
+          display: flex;
+          margin: 40px 36px;
+
+          h2 {
+            margin-bottom: 9px;
+            font-size: $font-size-18px;
+          }
+
+          p {
+            padding-bottom: 4px;
+            font-size: $font-size-12px;
+          }
+
+          img {
+            width: 75px;
+            height: 75px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
